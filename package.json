@@ -1,0 +1,12 @@
+{
+  "name": "partially-applied-functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "script": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "23.6.0"
+  }
+}

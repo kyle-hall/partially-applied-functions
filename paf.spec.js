@@ -2,7 +2,15 @@
 const partApply = require('./paf')
 
 describe('partApply', () => {
-  test('should return 5 when partially applying an adder', () => {
+  test('should work on functions with 1 argument', () => {
+    const isAThing = thing => `${thing} is a thing.`
+
+    const partiallyAppliedThing = partApply(isAThing, 'JS')
+
+    expect(partiallyAppliedThing()).toEqual('JS is a thing.');
+  })
+
+  test('should work on functions with 2 arguments', () => {
     const add = (x, y) => x + y
 
     const partiallyAppliedAdder = partApply(add, 3)
@@ -15,6 +23,6 @@ describe('partApply', () => {
 
     const partiallyAppliedStringBuilder = partApply(stringBuilder, "one")
 
-    expect(partiallyAppliedStringBuilder("two", "three")).toEqual("one two threed")
+    expect(partiallyAppliedStringBuilder("two", "three")).toEqual("one two three")
   })
 })

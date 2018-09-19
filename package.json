@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "script": {
-    "test": "jest"
+  "scripts": {
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "jest": "23.6.0"
